@@ -1,5 +1,14 @@
+import React from 'react';
+import GlobalStyles from './styles/GlobalStyles';
+import Layout from './components/Layout/Layout';
+
 function App() {
-  return <div>Pokemon Marketplace!!!</div>;
+  return (
+    <>
+      <GlobalStyles />
+      <Layout />
+    </>
+  );
 }
 
 export default App;
