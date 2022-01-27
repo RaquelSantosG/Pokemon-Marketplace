@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-bottom: 2.2rem;
+  margin-top: 2.2rem;
 `;
 
 export const Label = styled.label`
