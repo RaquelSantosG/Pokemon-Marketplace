@@ -2,7 +2,7 @@ import React from 'react';
 import * as S from './styled';
 import HeaderContent from '../HeaderContent/HeaderContent';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from "../Home/Home";
+import Home from "../Home/home";
 
 function Content() {
   return (
