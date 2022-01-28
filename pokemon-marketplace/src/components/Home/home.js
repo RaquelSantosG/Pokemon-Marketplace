@@ -1,8 +1,8 @@
 import React from 'react';
+import * as S from './styled';
 
 function Home() {
-  return <div>oi</div>;
+  return <S.Container>Oi</S.Container>;
 }
 
 export default Home;
- 

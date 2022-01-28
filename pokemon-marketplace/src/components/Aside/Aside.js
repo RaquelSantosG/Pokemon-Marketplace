@@ -10,7 +10,7 @@ function Aside() {
         <S.MenuContent>
           <S.MenuItem>
             <MdHome size={28} style={{ marginRight: '.2rem' }} />
-            Home
+            <Link to="/">Home</Link>
           </S.MenuItem>
         </S.MenuContent>
       </S.Menu>
