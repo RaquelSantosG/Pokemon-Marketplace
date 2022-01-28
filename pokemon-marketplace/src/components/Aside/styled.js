@@ -18,7 +18,7 @@ export const Logo = styled.img`
 `;
 
 export const Menu = styled.nav`
-  margin-top: 5.5vh;
+  margin-top: 8.8vh;
   display: flex;
   justify-content: center;
 `;
@@ -28,12 +28,16 @@ export const MenuContent = styled.ul`
   flex-direction: column;
   justify-content: center;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  background-color: #f2fd00;
-  padding: 1rem 0;
-  border-radius: 1rem;
+  background-color: #f7f55e;
+  outline: 3px solid #cbc205;
+  padding: 1.3rem 0;
+  border-radius: 0.6rem;
   width: 86%;
   box-shadow: 0px 2px 7px -1px rgba(0, 0, 0, 0.5);
+
+  &:hover {
+    outline: 3px solid #2042ec;
+  }
 `;
 
 export const MenuItem = styled.li`
