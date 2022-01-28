@@ -12,8 +12,7 @@ export const HeaderBar = styled.header`
       rgba(215, 206, 23, 0.6) 100%
     ),
     url(${faixa});
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center;
   background-size: 85rem;
-  /* border-bottom: 12px solid #a3aef6; */
 `;
