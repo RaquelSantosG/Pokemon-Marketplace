@@ -14,15 +14,32 @@ export const ContentBar = styled.div`
   padding: 0.5rem;
 `;
 
+export const Btn = styled.button`
+  border: none;
+  background: none;
+`;
+
 export const Cart = styled(FaShoppingCart)`
   color: #4a68fc;
+
+  &:hover {
+    color: #081366;
+  }
 `;
 
 export const Person = styled(MdPerson)`
   margin: 1rem;
   color: #4a68fc;
+
+  &:hover {
+    color: #081366;
+  }
 `;
 
 export const Logout = styled(MdOutlineLogout)`
   color: #4a68fc;
+
+  &:hover {
+    color: #081366;
+  }
 `;

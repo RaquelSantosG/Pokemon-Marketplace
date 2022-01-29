@@ -2,7 +2,6 @@ import React from 'react';
 import * as S from './styled';
 import logo from '../../assets/pokeapi_logo.png';
 import AmountInput from '../AmountInput/AmountInput';
-import { BsFillTrashFill } from 'react-icons/bs';
 
 function Cart() {
   return (
@@ -11,27 +10,82 @@ function Cart() {
         <S.TitleGroup>
           <S.Produtos>Produtos</S.Produtos>
           <S.Quantidade>Quantidade</S.Quantidade>
-          <S.Preco>Preço</S.Preco>
-          <S.Subtotal>Subtotal</S.Subtotal>
+          <S.Preco>Preço(R$)</S.Preco>
+          <S.Subtotal>Subtotal(R$)</S.Subtotal>
         </S.TitleGroup>
         <S.ListaCarrinho>
           <S.Item>
-            <S.Imagem src={logo} alt="imagem pokemon" />
-            <S.Name>Pikaju</S.Name>
-            <AmountInput />
-            <S.Valor>R$ 20.000,00</S.Valor>
-            <S.Valor>R$ 20.000,00</S.Valor>
-            <BsFillTrashFill size={25} color={'#fff'} />
+            <S.Tabela>
+              <S.Body>
+                <S.Row>
+                  <S.Dado>
+                    <S.Imagem src={logo} alt="imagem pokemon" />
+                  </S.Dado>
+                  <S.Dado width="30%" style={{ textAlign: 'left' }}>
+                    <S.Name>Wigglytuff</S.Name>
+                  </S.Dado>
+                  <S.Dado>
+                    <AmountInput />
+                  </S.Dado>
+                  <S.Dado width="160px" style={{ textAlign: 'center' }}>
+                    <S.Valor>20.000,00</S.Valor>
+                  </S.Dado>
+                  <S.Dado width="160px" style={{ textAlign: 'left' }}>
+                    <S.Valor>20.000,00</S.Valor>
+                  </S.Dado>
+                  <S.Dado>
+                    <S.Valor>
+                      <S.Btn>
+                        <S.TrashCan size={25} />
+                      </S.Btn>
+                    </S.Valor>
+                  </S.Dado>
+                </S.Row>
+              </S.Body>
+            </S.Tabela>
           </S.Item>
+
           <S.Item>
-            <S.Imagem src={logo} alt="imagem pokemon" />
-            <S.Name>Pikaju</S.Name>
-            <AmountInput />
-            <S.Valor>R$ 20.000,00</S.Valor>
-            <S.Valor>R$ 20.000,00</S.Valor>
-            <BsFillTrashFill size={25} color={'#fff'} />
+            <S.Tabela>
+              <S.Body>
+                <S.Row>
+                  <S.Dado>
+                    <S.Imagem src={logo} alt="imagem pokemon" />
+                  </S.Dado>
+                  <S.Dado width="30%" style={{ textAlign: 'left' }}>
+                    <S.Name>Pikaju</S.Name>
+                  </S.Dado>
+                  <S.Dado>
+                    <AmountInput />
+                  </S.Dado>
+                  <S.Dado width="160px" style={{ textAlign: 'center' }}>
+                    <S.Valor>20.000,00</S.Valor>
+                  </S.Dado>
+                  <S.Dado width="160px" style={{ textAlign: 'left' }}>
+                    <S.Valor>20.000,00</S.Valor>
+                  </S.Dado>
+                  <S.Dado>
+                    <S.Valor>
+                      <S.Btn>
+                        <S.TrashCan size={25} />
+                      </S.Btn>
+                    </S.Valor>
+                  </S.Dado>
+                </S.Row>
+              </S.Body>
+            </S.Tabela>
           </S.Item>
         </S.ListaCarrinho>
+
+        <S.BtnContainer>
+          <S.ComprarContent>
+            <S.ComprarBtn>Continuar comprando</S.ComprarBtn>
+          </S.ComprarContent>
+          <S.TotalContent>
+            <S.Total>Total: R$ 40.000,00</S.Total>
+            <S.FinalizarBtn>Finalizar compra</S.FinalizarBtn>
+          </S.TotalContent>
+        </S.BtnContainer>
       </S.Content>
     </S.Container>
   );

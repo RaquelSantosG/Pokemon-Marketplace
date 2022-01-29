@@ -2,8 +2,11 @@ import styled from 'styled-components';
 
 export const MenuContainer = styled.div`
   grid-area: AS;
-  height: 100vh;
+  height: 100%;
   background-color: #f7f753;
+  position: relative;
+  bottom: 0;
+  left: 0;
 `;
 
 export const LogoContainer = styled.div`
@@ -51,7 +54,7 @@ export const MenuItem = styled.li`
   &:hover {
     background-color: #f8fbae;
     border-radius: 10px;
-    box-shadow: 0px 10px 7px -1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 10px 7px -7px rgba(0, 0, 0, 0.5);
     transform: translateY(-4px);
   }
 
