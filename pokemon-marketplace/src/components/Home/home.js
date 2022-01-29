@@ -13,13 +13,6 @@ import flareon  from '../../assets/flareon.png';
 import Purugly  from '../../assets/Purugly.png';
 
 
-
-
-
-
-
-
-
 function Home() {
   let pokemons = [
     {id: 1, img: pikachu,  nome: 'Pikachu', tipo: 'Elétrico', preco: 'R$ 20.000,00'},
@@ -30,10 +23,6 @@ function Home() {
     { id: 6, img:Perrserker , nome: 'Perrserker ', tipo: 'Lendário', preco: 'R$ 260.000,00',},
     { id: 7, img:flareon , nome: 'flareon ', tipo: 'Lendário', preco: 'R$ 260.000,00',},
     { id: 8, img:Purugly , nome: 'Purugly ', tipo: 'Lendário', preco: 'R$ 260.000,00',},
-
-
-
-
 
   ];
  
