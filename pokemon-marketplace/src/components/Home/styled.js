@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div` 
   margin-top: 3rem;
-  background-color: #f7f753;
+  background-color: #b5c9f9;
   padding: 7rem;
   border-radius: 10px;
   
@@ -31,10 +31,10 @@ export const Card = styled.div`
 ;`
 
 export const Imagem = styled.img`
-  height: 147px;
-  width: 147px;
+  height: 140px;
+  width: 140px;
   margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 ;`
 
 export const Title = styled.h4`
@@ -65,4 +65,6 @@ export const Carrinho = styled.button`
   margin-bottom: 2rem;
   background-color: #717171;
   border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
 ;`
