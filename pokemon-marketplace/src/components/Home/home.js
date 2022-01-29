@@ -8,6 +8,13 @@ import Ivysaur from '../../assets/Ivysaur.png';
 import Ninetales from '../../assets/Ninetales.png';
 import Bulbasaur from '../../assets/Bulbasaur.png';
 import Palkia from '../../assets/palkia.png';
+import Perrserker  from '../../assets/perrserker.png';
+import flareon  from '../../assets/flareon.png';
+import Purugly  from '../../assets/Purugly.png';
+
+
+
+
 
 
 
@@ -20,6 +27,13 @@ function Home() {
     { id: 3,img: squirtle, nome: 'squirtle', tipo: 'Água', preco: 'R$ 35.000,00' },
     { id: 4,img:Bulbasaur, nome: 'Bulbasaur', tipo: 'Grama/veneno', preco: 'R$ 35.000,00' },
     { id: 5, img:Palkia, nome: 'Palkia', tipo: 'Lendário', preco: 'R$ 260.000,00',},
+    { id: 6, img:Perrserker , nome: 'Perrserker ', tipo: 'Lendário', preco: 'R$ 260.000,00',},
+    { id: 7, img:flareon , nome: 'flareon ', tipo: 'Lendário', preco: 'R$ 260.000,00',},
+    { id: 8, img:Purugly , nome: 'Purugly ', tipo: 'Lendário', preco: 'R$ 260.000,00',},
+
+
+
+
 
   ];
  
