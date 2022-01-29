@@ -61,7 +61,7 @@ export const MenuItem = styled.li`
   }
 `;
 
-export const Content = styled.a`
+export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;

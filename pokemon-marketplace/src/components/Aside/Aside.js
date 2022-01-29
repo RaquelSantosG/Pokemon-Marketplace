@@ -24,7 +24,7 @@ function Aside() {
             </Link>
           </S.MenuItem>
           <S.MenuItem>
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            <Link to="/carrinho" style={{ textDecoration: 'none' }}>
               <S.Content>
                 <FaShoppingCart size={25} style={{ marginRight: '.5rem' }} />
                 Poke Cart
