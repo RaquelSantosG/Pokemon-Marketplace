@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div` 
   margin-top: 3rem;
   background-color: #f7f753;
-  padding: 0.8rem;
+  padding: 7rem;
   border-radius: 10px;
   
 ;`
@@ -19,7 +19,7 @@ export const Item = styled.li`
 ;`
 
 export const Card = styled.div`
-  height: 20rem;
+  height: 23rem;
   width: 100%;
   background-color: #fff;
   border-radius: 10px;
@@ -31,8 +31,8 @@ export const Card = styled.div`
 ;`
 
 export const Imagem = styled.img`
-  height: 10rem;
-  width: 10rem;
+  height: 147px;
+  width: 147px;
   margin-bottom: 1rem;
   margin-top: 1rem;
 ;`
@@ -62,5 +62,7 @@ export const Preco = styled.p`
 export const Carrinho = styled.button`
   border: none;
   padding: 1rem 0;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  background-color: #717171;
+  border-radius: 5px;
 ;`

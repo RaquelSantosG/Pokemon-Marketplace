@@ -1,17 +1,20 @@
 import React from 'react';
 import * as S from './styled';
-import logo from '../../assets/pokeapi_logo.png';
+import logo from '../../assets/pikachu.png';
+
+
+
 
 function Home() {
   const pokemons = [
     { id: 1, nome: 'Pikachu', tipo: 'Elétrico', preco: 'R$ 20.000,00' },
     { id: 2, nome: 'Bulbasaur', tipo: 'Natureza', preco: 'R$ 45.000,00' },
-    { id: 3, nome: 'Charmander', tipo: 'Fogo', preco: 'R$ 20.000,00' },
-    { id: 4, nome: 'Squirtle', tipo: 'Água', preco: 'R$ 20.000,00' },
-    { id: 5, nome: 'Blastoise', tipo: 'Elétrico', preco: 'R$ 20.000,00' },
-    { id: 6, nome: 'Ivysaur ', tipo: 'Elétrico', preco: 'R$ 20.000,00' },
-    { id: 7, nome: 'Ninetales', tipo: 'Elétrico', preco: 'R$ 20.000,00' },
-    { id: 8, nome: 'Butterfree ', tipo: 'Elétrico', preco: 'R$ 20.000,00' },
+    { id: 3, nome: 'Charmander', tipo: 'Fogo', preco: 'R$ 30.000,00' },
+    { id: 4, nome: 'Squirtle', tipo: 'Água', preco: 'R$ 35.000,00' },
+    { id: 5, nome: 'Blastoise', tipo: 'Elétrico', preco: 'R$ 45.000,00' },
+    { id: 6, nome: 'Ivysaur ', tipo: 'Elétrico', preco: 'R$ 55.000,00' },
+    { id: 7, nome: 'Ninetales', tipo: 'Elétrico', preco: 'R$ 25.000,00' },
+    { id: 8, nome: 'Butterfree ', tipo: 'Elétrico', preco: 'R$ 23.000,00' },
   ];
 
   return (
