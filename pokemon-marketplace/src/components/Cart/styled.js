@@ -6,6 +6,7 @@ export const Container = styled.div`
   padding: 1rem;
   display: flex;
   justify-content: center;
+  position: relative;
 `;
 
 export const Content = styled.div`
@@ -94,6 +95,7 @@ export const Btn = styled.button`
 
 export const TrashCan = styled(BsFillTrashFill)`
   color: #fff;
+  transition: all 0.6s;
 
   &:hover {
     color: #f25563;
