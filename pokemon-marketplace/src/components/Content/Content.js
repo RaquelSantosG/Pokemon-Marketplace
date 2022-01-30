@@ -13,7 +13,7 @@ function Content() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/carrinho" element={<Cart />} />
-        <Route path="/profile" element={<Profile/>} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </S.Container>
   );
