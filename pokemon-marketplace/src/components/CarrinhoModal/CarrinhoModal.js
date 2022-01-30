@@ -27,7 +27,7 @@ function CarrinhoModal({ onClick }) {
           <S.Info>Em breve você receberá um</S.Info>
           <S.Info>e-mail com todos os detalhes</S.Info>
         </S.Paragraph>
-        <S.HomeBtn>Voltar para a home</S.HomeBtn>
+        <S.HomeBtn onClick={() => navigate('/')}>Voltar para a home</S.HomeBtn>
       </S.Content>
     </S.Container>
   );

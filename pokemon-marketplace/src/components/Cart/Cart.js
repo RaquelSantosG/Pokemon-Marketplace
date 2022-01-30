@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import * as S from './styled';
 import logo from '../../assets/pokeapi_logo.png';
 import AmountInput from '../AmountInput/AmountInput';
-//import CarrinhoModal from '../CarrinhoModal/CarrinhoModal';
+import CarrinhoModal from '../CarrinhoModal/CarrinhoModal';
 
 function Cart() {
-  // const [carrinhoModal, setCarrinhoModal] = useState(false);
+  const [carrinhoModal, setCarrinhoModal] = useState(false);
 
-  // function handleCarrinhoModal() {
-  //   setCarrinhoModal(!carrinhoModal);
-  // }
+  function handleCarrinhoModal() {
+    setCarrinhoModal(!carrinhoModal);
+  }
 
   return (
     <>
@@ -91,14 +91,14 @@ function Cart() {
             </S.ComprarContent>
             <S.TotalContent>
               <S.Total>Total: R$ 40.000,00</S.Total>
-              {/* <S.FinalizarBtn onClick={() => handleCarrinhoModal()}>
+              <S.FinalizarBtn onClick={() => handleCarrinhoModal()}>
                 Finalizar compra
-              </S.FinalizarBtn> */}
+              </S.FinalizarBtn>
             </S.TotalContent>
           </S.BtnContainer>
         </S.Content>
       </S.Container>
-      {/* {carrinhoModal && <CarrinhoModal onClick={handleCarrinhoModal} />} */}
+      {carrinhoModal && <CarrinhoModal onClick={handleCarrinhoModal} />}
     </>
   );
 }
