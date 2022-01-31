@@ -18,7 +18,7 @@ function Profile() {
                         <S.ProfileLabel>
                             Nome Completo                           
                         </S.ProfileLabel>
-                         <S.ProfileText onChange={()=>""} />
+                         <S.ProfileText onChange={()=>""} value="Ash Ketchum" />
                         
                     </S.ProfileQ>
 

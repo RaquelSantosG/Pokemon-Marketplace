@@ -32,7 +32,7 @@ function Aside() {
             </Link>
           </S.MenuItem>
           <S.MenuItem>
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            <Link to="/profile" style={{ textDecoration: 'none' }}>
               <S.Content>
                 <MdPerson size={35} style={{ marginRight: '.5rem' }} />
                 Perfil

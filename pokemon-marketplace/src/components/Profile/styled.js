@@ -4,7 +4,8 @@ export const Container = styled.div `
  
  margin-top: 3rem;
  height: 25rem;
- background-color: #cecece;
+ background-color: #b5c9f9;
+ border-radius: 10px;
  display:flex;
  justify-content: center; 
  align-items: center;
@@ -12,9 +13,9 @@ export const Container = styled.div `
 
 export const Content = styled.div `
 
- height: 17rem;
+ height: 18rem;  //17
  background-color: #fff;
- width: 30rem;
+ width: 30rem; //30
  border-radius:15px;
  display: flex;
  padding:2rem;
@@ -79,8 +80,13 @@ border-radius:5px;
 border: none;
 outline: 1px solid #000;
 background: #F0F0F0;
-font-size: 8px;
+font-size: 11px;
 outline: none;
+width: 9rem; //5
+height: 35px; //23
+font-weight: 400;
+
+
 
 
 
@@ -91,26 +97,27 @@ outline: none;
 export const ProfileSelect = styled.select`
 margin-left: 1rem;
 margin-top:0.4rem;
-width: 5rem;
+width: 6rem; //5
+height: 35px; //23
 border-radius:5px;
 border: none;
-height: 23px;
 outline: 1px solid #000;
 background: #F0F0F0;
 cursor: pointer;
-font-size: 8px;
+font-size: 10px;
 color:#292929;
 outline: none;
+padding-left: 1.3rem;
 
 `;
 
 export const ProfileSelect2 = styled.select`
 
 margin-top:0.4rem;
-width: 5rem;
+width: 6rem;
 border-radius:5px;
 border: none;
-height: 23px;
+height: 35px;
 outline: 1px solid #000;
 background: #F0F0F0;
 margin-right: 1rem;
@@ -118,11 +125,13 @@ cursor: pointer;
 color:#292929;
 font-size: 8px;
 outline: none;
+font-size: 10px;
+padding-left: 0.7rem;
 `;
 
 export const ProfileLabel = styled.label `
 margin-top:0.8rem;
-font-size: 8px;
+font-size: 11px;
 color: #717171;
 
 
@@ -132,7 +141,7 @@ color: #717171;
 export const ProfileLabelTwo = styled.label`
 margin-left: 1rem;
 margin-top:0.8rem;
-font-size: 8px;
+font-size: 11px;
 color: #717171;
 
 
@@ -155,6 +164,12 @@ box-sizing: border-box;
 width: 5rem;
 height: 30px;
 font-size : 12px;
+transition: all 0.5s;
+
+ &:hover {
+  opacity: 0.7;
+     
+ }
 `;
 
 export const ProfileButton2 = styled.button `
@@ -169,5 +184,13 @@ border: 1px solid #717171;
 box-sizing: border-box;
 color:white;
 color: #717171;
+transition: all 0.5s;
+
+ &:hover {
+  opacity: 0.7;
+  background-color: #292929;
+  color: #FFFFFF;
+     
+ }
 
 `;
