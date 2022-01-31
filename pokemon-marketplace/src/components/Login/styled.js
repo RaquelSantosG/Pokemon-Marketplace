@@ -19,7 +19,7 @@ export const Content = styled.div`
   box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.3);
 `;
 
-export const AuthContainer = styled.div`
+export const AuthContainer = styled.form`
   display: flex;
   flex-direction: column;
   padding: 1rem 2rem;
