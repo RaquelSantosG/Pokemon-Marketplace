@@ -1,22 +1,21 @@
 import styled from 'styled-components';
 
-export const Container = styled.div` 
+export const Container = styled.div`
   margin-top: 3rem;
   background-color: #b5c9f9;
-  padding: 7rem;
-  border-radius: 10px;
-  
-;`
+  padding: 3rem;
+  border-radius: 10px; ;
+`;
 
 export const Lista = styled.ul`
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-;`
+  flex-wrap: wrap; ;
+`;
 
 export const Item = styled.li`
-  margin: 1rem;
-;`
+  margin: 1rem; ;
+`;
 
 export const Card = styled.div`
   height: 23rem;
@@ -27,37 +26,37 @@ export const Card = styled.div`
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-;`
+  justify-content: center; ;
+`;
 
 export const Imagem = styled.img`
   height: 140px;
   width: 140px;
   margin-bottom: 1rem;
-  margin-top: 1.5rem;
-;`
+  margin-top: 1.5rem; ;
+`;
 
 export const Title = styled.h4`
   color: #6c605e;
-  margin-bottom: 1rem;
-;`
+  margin-bottom: 1rem; ;
+`;
 
 export const Tipo = styled.p`
   color: #6c605e;
   font-size: 0.9rem;
-  margin-bottom: 1rem;
-;`
+  margin-bottom: 1rem; ;
+`;
 
 export const Detalhes = styled.p`
   color: #6c605e;
-  margin-bottom: 1rem;
-;`
+  margin-bottom: 1rem; ;
+`;
 
 export const Preco = styled.p`
   color: #6c605e;
   font-weight: bold;
-  margin-bottom: 1rem;
-;`
+  margin-bottom: 1rem; ;
+`;
 
 export const Carrinho = styled.button`
   border: none;
@@ -66,5 +65,5 @@ export const Carrinho = styled.button`
   background-color: #717171;
   border-radius: 5px;
   color: #fff;
-  font-weight: bold;
-;`
+  font-weight: bold; ;
+`;
