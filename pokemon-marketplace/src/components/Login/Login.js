@@ -2,13 +2,14 @@ import React, { useContext, useState } from 'react';
 import * as S from './styled';
 import logo from '../../assets/pokeapi_logo.png';
 import TextInput from '../TextInput/TextInput';
-import AuthContext from '../../context/AuthContext';
+import { useAuth } from '../../context/AuthContext';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-function Login({ logged, setLogged }) {
+function Login() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
+  const { setLogged } = useAuth();
 
   //const { setLogged } = useContext(AuthContext);
 

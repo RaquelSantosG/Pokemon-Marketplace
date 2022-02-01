@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as S from './styled';
 import pikachu from '../../assets/pikachu.png';
 import squirtle from '../../assets/squirtle.png';
@@ -10,9 +10,12 @@ import flareon from '../../assets/flareon.png';
 import Purugly from '../../assets/Purugly.png';
 
 import Details from '../DetailsModal/Details';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { getAllPokemons } from '../../redux/sagas/pokemons.sagas';
 
 function Home() {
-  let pokemons = [
+  let pokes = [
     {
       id: 1,
       img: pikachu,
@@ -99,13 +102,28 @@ function Home() {
     },
   ];
 
+  const storage = useSelector((state) => state);
+  const dispatch = useDispatch();
+
+  const [pokemons, setPokemons] = useState([]);
+
+  useEffect(() => {
+    getAllPokemons();
+  }, []);
+
+  // const getPokemons = async () => {
+  //   const response = await fetch('https://pokeapi.co/api/v2/pokemon/');
+  //   const data = await response.json();
+  //   console.log(data);
+  // };
+
   const [modal, setModal] = useState(false);
   const [pokemonSelected, setPokemonSelected] = useState({});
 
   return (
     <S.Container>
       <S.Lista>
-        {pokemons.map((pokemon) => (
+        {pokes.map((pokemon) => (
           <S.Item key={pokemon.id}>
             <S.Card>
               {modal && (
@@ -116,7 +134,7 @@ function Home() {
                 />
               )}
               <S.Imagem src={pokemon.img} alt="foto pokemon" />
-              <S.Title>{pokemon.nome}</S.Title>
+              <S.Title>{pokemon.name}</S.Title>
               <S.Tipo>{pokemon.tipo}</S.Tipo>
               <S.Detalhes>+ detalhes</S.Detalhes>
               <S.Preco>{pokemon.preco}</S.Preco>
