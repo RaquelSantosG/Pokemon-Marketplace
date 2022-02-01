@@ -1,13 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import * as S from './styled';
-import pikachu from '../../assets/pikachu.png';
-import squirtle from '../../assets/squirtle.png';
-import Charmander from '../../assets/Charmander.png';
-import Bulbasaur from '../../assets/Bulbasaur.png';
-import Palkia from '../../assets/palkia.png';
-import Perrserker from '../../assets/perrserker.png';
-import flareon from '../../assets/flareon.png';
-import Purugly from '../../assets/Purugly.png';
 
 import Details from '../DetailsModal/Details';
 import { useDispatch, useSelector } from 'react-redux';

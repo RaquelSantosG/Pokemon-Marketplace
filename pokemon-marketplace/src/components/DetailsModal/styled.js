@@ -15,8 +15,8 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  height: 22rem;
-  width: 37rem;
+  height: 26rem;
+  width: 45rem;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 10px;
   display: flex;
@@ -43,14 +43,14 @@ export const Image = styled.img`
 `;
 
 export const LeftColumn = styled.div`
-  width: 45%;
+  width: 35rem;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
 export const RightColumn = styled.div`
-  width: 55%;
+  width: 60rem;
   background-color: #e3dbda;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -59,28 +59,53 @@ export const RightColumn = styled.div`
 
 export const Name = styled.h4`
   color: #6c605e;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   background-color: white;
   padding: 0.5rem 0.5rem;
   border-radius: 10px;
   font-size: 1.1rem;
+  text-transform: uppercase;
+  box-shadow: 2px 5px 7px -3px rgba(0, 0, 0, 0.65);
 `;
 
-export const Feature = styled.h5`
+export const Type = styled.h4`
+  color: #6c605e;
+  margin-bottom: 1rem;
+`;
+
+export const FeatureTitle = styled.h4`
+  color: #6c605e;
+  margin-bottom: 0.5rem;
+`;
+
+export const Feature = styled.p`
   color: #6c605e;
   font-size: 0.9rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  font-size: 0.6rem;
+  line-height: 1.4;
+  font-weight: bold;
 `;
 
 export const AddContent = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  width: 60%;
+  background-color: #cecece;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1rem;
+  padding: 5px 0;
+  box-shadow: 2px 5px 7px -3px rgba(0, 0, 0, 0.65);
+  border-radius: 10px;
 `;
 
 export const Preco = styled.h4`
   color: #6c605e;
   font-weight: bold;
+  font-size: 1.3rem;
   margin-right: 1.5rem;
 `;
 
@@ -95,6 +120,6 @@ export const Carrinho = styled.button`
   transition: 0.5s;
 
   &:hover {
-    opacity: 0.7;
+    background-color: #332f2e;
   }
 `;
