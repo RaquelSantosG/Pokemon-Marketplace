@@ -12,7 +12,7 @@ import Purugly from '../../assets/Purugly.png';
 import Details from '../DetailsModal/Details';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { getAllPokemons } from '../../redux/sagas/pokemons.sagas';
+import { funcTake } from '../../redux/sagas/pokemons.sagas';
 
 function Home() {
   let pokes = [
@@ -107,9 +107,7 @@ function Home() {
 
   const [pokemons, setPokemons] = useState([]);
 
-  useEffect(() => {
-    getAllPokemons();
-  }, []);
+  useEffect(() => {}, []);
 
   // const getPokemons = async () => {
   //   const response = await fetch('https://pokeapi.co/api/v2/pokemon/');

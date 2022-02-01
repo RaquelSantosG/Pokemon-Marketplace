@@ -16,7 +16,7 @@ const fetchPokemons = async (url) => {
 function* getAllPokemons() {
   try {
     const pokemons = yield call(
-      fetchPokemons(`https://pokeapi.co/api/v2/pokemon/`)
+      fetchPokemons('https://pokeapi.co/api/v2/pokemon/')
     );
     for (const el of pokemons.results) {
       const details = yield call(fetchPokemons(el.url));
@@ -30,4 +30,4 @@ function* funcTake() {
   yield takeEvery('CALL_SAGA', getAllPokemons);
 }
 
-export { funcTake, getAllPokemons };
+export { funcTake };
