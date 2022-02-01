@@ -5,10 +5,11 @@ import { useAuth } from '../../context/AuthContext';
 
 function HeaderContent() {
   const navigate = useNavigate();
-  const { setLogged } = useAuth();
+  const { setLogged, user } = useAuth();
 
   return (
     <S.ContentBar>
+      <S.Login>Bem Vindo: {user.email}</S.Login>
       <S.Btn onClick={() => navigate('/carrinho')}>
         <S.Cart size={30} />
       </S.Btn>

@@ -18,11 +18,11 @@ export default AuthContext;
 
 export function useAuth() {
   const context = useContext(AuthContext);
-  console.log(context);
 
-  const { logged, setLogged } = context;
+  const { logged, setLogged, user } = context;
   return {
     logged,
     setLogged,
+    user,
   };
 }

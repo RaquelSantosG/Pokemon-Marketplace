@@ -12,6 +12,15 @@ export const ContentBar = styled.div`
   justify-content: flex-end;
   align-items: center;
   padding: 0.5rem;
+  position: relative;
+`;
+
+export const Login = styled.span`
+  color: #081366;
+  font-size: 1.1rem;
+  font-weight: bold;
+  position: absolute;
+  left: 10px;
 `;
 
 export const Btn = styled.button`
