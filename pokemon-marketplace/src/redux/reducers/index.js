@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
 
-import PokeApiReducer from '../reducers/pokeApiReducer';
+import pokeApiReducer from '../reducers/pokeApiReducer';
+import cartReducer from '../reducers/cartReducer';
 
 export default combineReducers({
-  pokemons: PokeApiReducer,
+  pokemons: pokeApiReducer,
+  cart: cartReducer,
 });

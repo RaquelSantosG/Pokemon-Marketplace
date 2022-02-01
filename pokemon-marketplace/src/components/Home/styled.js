@@ -18,28 +18,42 @@ export const Item = styled.li`
 `;
 
 export const Card = styled.div`
-  height: 22rem;
+  height: 23rem;
   width: 100%;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 5px 6px 1px rgba(0, 0, 0, 0.4);
-  padding: 2rem;
+  padding: 10px 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
+  outline: 4px solid #fed000;
   transition: all 0.1s;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 215, 122, 1) 0%,
+    rgba(255, 207, 48, 1) 49%,
+    rgba(236, 255, 0, 1) 100%
+  );
 
   &:hover {
     outline: 4px solid #007aff;
   }
 `;
 
+export const CardInfos = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 10rem;
+  padding-top: 0.5rem;
+`;
+
 export const Imagem = styled.img`
   height: 140px;
   width: 140px;
   margin-bottom: 0.1rem;
-  margin-top: 0.5rem;
 `;
 
 export const Title = styled.h4`

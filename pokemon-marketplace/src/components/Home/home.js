@@ -4,30 +4,24 @@ import * as S from './styled';
 import Details from '../DetailsModal/Details';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { getPokemonsRequest } from '../../redux/actions/pokeApiActions';
+
 function Home() {
-  const storage = useSelector((state) => state);
+  const storage = useSelector((state) => state.pokemons);
   const dispatch = useDispatch();
 
-  const [pokemons, setPokemons] = useState([]);
-
-  const getPokemons = async () => {
-    const result = await fetch('https://pokeapi.co/api/v2/pokemon/');
-    const data = await result.json();
-
-    let listaDetalhes = [];
-
-    for (const el of data.results) {
-      const details = await fetch(el.url);
-      const detailsData = await details.json();
-      listaDetalhes.push(detailsData);
-    }
-
-    setPokemons(listaDetalhes);
-  };
+  const [pokemonsSagas, setPokemonsSagas] = useState([]);
 
   useEffect(() => {
-    getPokemons();
-    console.log(pokemons);
+    if (storage.pokemons !== undefined) {
+      setPokemonsSagas(storage.pokemons);
+    }
+    console.log('storage:', storage.pokemons);
+  }, [storage.pokemons]);
+
+  useEffect(() => {
+    dispatch(getPokemonsRequest());
+    //getPokemons();
   }, []);
 
   const [modal, setModal] = useState(false);
@@ -36,7 +30,7 @@ function Home() {
   return (
     <S.Container>
       <S.Lista>
-        {pokemons.map((pokemon) => (
+        {pokemonsSagas.map((pokemon) => (
           <S.Item key={pokemon.name}>
             <S.Card>
               {modal && (
@@ -50,18 +44,20 @@ function Home() {
                 src={pokemon.sprites.front_default}
                 alt="foto pokemon"
               />
-              <S.Title>{pokemon.name}</S.Title>
-              <S.Tipo>Pokemon tipo: {pokemon.types[0].type.name}</S.Tipo>
-              <S.Detalhes>+ detalhes</S.Detalhes>
-              <S.Preco>R$: {pokemon.weight},00</S.Preco>
-              <S.Carrinho
-                onClick={() => {
-                  setPokemonSelected(pokemon);
-                  setModal(!modal);
-                }}
-              >
-                Adicionar ao carrinho
-              </S.Carrinho>
+              <S.CardInfos>
+                <S.Title>{pokemon.name}</S.Title>
+                <S.Tipo>Pokemon tipo: {pokemon.types[0].type.name}</S.Tipo>
+                <S.Detalhes>+ detalhes</S.Detalhes>
+                <S.Preco>R$: {pokemon.weight},00</S.Preco>
+                <S.Carrinho
+                  onClick={() => {
+                    setPokemonSelected(pokemon);
+                    setModal(!modal);
+                  }}
+                >
+                  Adicionar ao carrinho
+                </S.Carrinho>
+              </S.CardInfos>
             </S.Card>
           </S.Item>
         ))}

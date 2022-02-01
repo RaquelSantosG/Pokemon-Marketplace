@@ -4,8 +4,9 @@ import {
   take,
   takeEvery,
   //race,
-  //takeLatest,
+  takeLatest,
   call,
+  all,
   //delay,
 } from 'redux-saga/effects';
 
@@ -14,28 +15,36 @@ const fetchPokemons = async (url) => {
 };
 
 function* getAllPokemons() {
+  console.log('Entrou!');
   try {
     const pokemons = yield call(
-      fetchPokemons('https://pokeapi.co/api/v2/pokemon/')
+      fetchPokemons,
+      'https://pokeapi.co/api/v2/pokemon/'
     );
+
+    let listDetails = [];
+
     for (const el of pokemons.results) {
-      const details = yield call(fetchPokemons(el.url));
-      console.log(details);
-      // yield put({ type: 'GET_POKEMONS', payload: details });
+      const details = yield call(fetchPokemons, el.url);
+      listDetails.push(details);
     }
-  } catch (error) {}
+    console.log('listagem', listDetails);
+    yield put({ type: 'ADD_POKEMONS', payload: listDetails });
+  } catch (error) {
+    console.log(error);
+  }
 }
 
-function* funcTake() {
-  console.log('funcTake');
-  //const action = yield take('GET_POKEMONS');
-  //console.log(action);
-  yield takeEvery('CALL_SAGAS', getAllPokemons);
-}
+// function* funcTake() {
+//   console.log('funcTake');
+//   const action = yield take('GET_POKEMONS');
+//   console.log(action);
+//   yield takeEvery('CALL_SAGAS', getAllPokemons);
+// }
 
 // function* funcTakeLast() {
 //   console.log('funcTakeLast');
 //   yield takeLatest('CALL_SAGA', getAllPokemons);
 // }
 
-export { funcTake };
+export default all([takeLatest('GET_POKEMONS', getAllPokemons)]);
