@@ -18,7 +18,7 @@ export const Item = styled.li`
 `;
 
 export const Card = styled.div`
-  height: 23rem;
+  height: 22rem;
   width: 100%;
   background-color: #fff;
   border-radius: 10px;
@@ -26,14 +26,20 @@ export const Card = styled.div`
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center; ;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const Imagem = styled.img`
   height: 140px;
   width: 140px;
-  margin-bottom: 1rem;
-  margin-top: 1.5rem; ;
+  margin-bottom: 0.1rem;
+  margin-top: 0.5rem; ;
 `;
 
 export const Title = styled.h4`
@@ -44,7 +50,7 @@ export const Title = styled.h4`
 export const Tipo = styled.p`
   color: #6c605e;
   font-size: 0.9rem;
-  margin-bottom: 1rem; ;
+  margin-bottom: 0.4rem; ;
 `;
 
 export const Detalhes = styled.p`
@@ -65,5 +71,15 @@ export const Carrinho = styled.button`
   background-color: #717171;
   border-radius: 5px;
   color: #fff;
-  font-weight: bold; ;
+  font-weight: bold;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: #4f4a49;
+    box-shadow: 0px 13px 7px -10px rgba(0, 0, 0, 0.84);
+  }
+
+  &:active {
+    box-shadow: 0px 8px 7px -10px rgba(0, 0, 0, 0.84);
+  }
 `;

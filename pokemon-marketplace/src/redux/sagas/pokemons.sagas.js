@@ -1,10 +1,10 @@
 import {
   //fork,
-  //put,
-  // take,
+  put,
+  take,
   takeEvery,
   //race,
-  // takeLatest,
+  //takeLatest,
   call,
   //delay,
 } from 'redux-saga/effects';
@@ -21,13 +21,21 @@ function* getAllPokemons() {
     for (const el of pokemons.results) {
       const details = yield call(fetchPokemons(el.url));
       console.log(details);
+      // yield put({ type: 'GET_POKEMONS', payload: details });
     }
   } catch (error) {}
 }
 
 function* funcTake() {
   console.log('funcTake');
-  yield takeEvery('CALL_SAGA', getAllPokemons);
+  //const action = yield take('GET_POKEMONS');
+  //console.log(action);
+  yield takeEvery('CALL_SAGAS', getAllPokemons);
 }
+
+// function* funcTakeLast() {
+//   console.log('funcTakeLast');
+//   yield takeLatest('CALL_SAGA', getAllPokemons);
+// }
 
 export { funcTake };
