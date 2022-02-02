@@ -24,8 +24,30 @@ export const Login = styled.span`
 `;
 
 export const Btn = styled.button`
+  position: relative;
   border: none;
   background: none;
+`;
+
+export const ContadorContainer = styled.div`
+  height: 1.3rem;
+  width: 1.3rem;
+  background-color: RGBA(255, 255, 255, 0.69);
+  position: absolute;
+  z-index: 1;
+  border-radius: 50px;
+  right: 1.2rem;
+  top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 6px 16px -6px #000000;
+`;
+
+export const Contador = styled.h6`
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #081366;
 `;
 
 export const Cart = styled(FaShoppingCart)`

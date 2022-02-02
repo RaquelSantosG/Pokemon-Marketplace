@@ -1,29 +1,29 @@
-import { ADD_POKEMON, DELETE_POKEMON } from '../actions/cartTypes';
-
 const initialState = {
   count: 0,
-  cart: [],
+  list: [],
   price: 0,
   amount: 0,
 };
 
-const pokeApiReducer = (state = initialState, action) => {
+const cartReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_POKEMON:
-      // const cartReducer = state.cart;
-      // cartReducer.push(action.payload);
+    case 'ADD_POKEMON':
+      const cartReducer = state.list;
+      cartReducer.push(action.payload);
       return {
         ...state,
-        cart: action.payload,
+        list: action.payload,
+        count: state.count + 1,
       };
-    case DELETE_POKEMON:
+    case 'DELETE_POKEMON':
       return {
         ...state,
         cart: action.payload,
+        count: state.count === 0 ? state.count : state.count - 1,
       };
     default:
       return state;
   }
 };
 
-export default pokeApiReducer;
+export default cartReducer;

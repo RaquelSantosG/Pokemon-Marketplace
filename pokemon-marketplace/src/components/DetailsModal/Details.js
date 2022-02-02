@@ -1,9 +1,17 @@
 import React from 'react';
 import * as S from './styled';
+import { useDispatch, useSelector } from 'react-redux';
 
 function Details({ pokemon, modal, setModal }) {
   const listaMovimentos = pokemon.moves.map((el) => el.move.name);
   listaMovimentos.join(', ');
+
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    console.log('Entrou handleClick');
+    dispatch({ type: 'ADD_POKEMON' });
+  };
 
   return (
     <S.Container>
@@ -22,7 +30,9 @@ function Details({ pokemon, modal, setModal }) {
           <S.Feature> {listaMovimentos} </S.Feature>
           <S.AddContent>
             <S.Preco>Preço: {pokemon.weight},00</S.Preco>
-            <S.Carrinho>Adicionar ao carrinho</S.Carrinho>
+            <S.Carrinho onClick={() => handleClick()}>
+              Adicionar ao carrinho
+            </S.Carrinho>
           </S.AddContent>
         </S.RightColumn>
       </S.Content>
