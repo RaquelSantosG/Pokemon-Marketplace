@@ -1,16 +1,18 @@
 import React from 'react';
 import * as S from './styled';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 function Details({ pokemon, modal, setModal }) {
   const listaMovimentos = pokemon.moves.map((el) => el.move.name);
   listaMovimentos.join(', ');
 
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    console.log('Entrou handleClick');
     dispatch({ type: 'ADD_POKEMON' });
+    navigate('/carrinho');
   };
 
   return (

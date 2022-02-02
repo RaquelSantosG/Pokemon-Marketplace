@@ -40,61 +40,61 @@ function Cart() {
             <S.Preco>Preço(R$)</S.Preco>
             <S.Subtotal>Subtotal(R$)</S.Subtotal>
           </S.TitleGroup>
-          {carrinho.length > 0 ? (
-            <S.ListaCarrinho>
-              <S.Item>
-                <S.Tabela>
-                  <S.Body>
-                    <S.Row>
-                      <S.Dado>
-                        <S.Imagem src={logo} alt="imagem pokemon" />
-                      </S.Dado>
-                      <S.Dado width="30%" style={{ textAlign: 'left' }}>
-                        <S.Name>Wigglytuff</S.Name>
-                      </S.Dado>
-                      <S.Dado>
-                        <AmountInput />
-                      </S.Dado>
-                      <S.Dado width="160px" style={{ textAlign: 'center' }}>
-                        <S.Valor>20.000,00</S.Valor>
-                      </S.Dado>
-                      <S.Dado width="160px" style={{ textAlign: 'left' }}>
-                        <S.Valor>20.000,00</S.Valor>
-                      </S.Dado>
-                      <S.Dado>
-                        <S.Valor>
-                          <S.Btn onClick={() => deletePokemon()}>
-                            <S.TrashCan size={25} />
-                          </S.Btn>
-                        </S.Valor>
-                      </S.Dado>
-                    </S.Row>
-                  </S.Body>
-                </S.Tabela>
-              </S.Item>
-            </S.ListaCarrinho>
-          ) : (
-            <S.ListaVazia>
+          {/* {carrinho.length > 0 ? ( */}
+          <S.ListaCarrinho>
+            <S.Item>
+              <S.Tabela>
+                <S.Body>
+                  <S.Row>
+                    <S.Dado>
+                      <S.Imagem src={logo} alt="imagem pokemon" />
+                    </S.Dado>
+                    <S.Dado width="30%" style={{ textAlign: 'left' }}>
+                      <S.Name>Wigglytuff</S.Name>
+                    </S.Dado>
+                    <S.Dado>
+                      <AmountInput />
+                    </S.Dado>
+                    <S.Dado width="160px" style={{ textAlign: 'center' }}>
+                      <S.Valor>20.000,00</S.Valor>
+                    </S.Dado>
+                    <S.Dado width="160px" style={{ textAlign: 'left' }}>
+                      <S.Valor>20.000,00</S.Valor>
+                    </S.Dado>
+                    <S.Dado>
+                      <S.Valor>
+                        <S.Btn onClick={() => deletePokemon()}>
+                          <S.TrashCan size={25} />
+                        </S.Btn>
+                      </S.Valor>
+                    </S.Dado>
+                  </S.Row>
+                </S.Body>
+              </S.Tabela>
+            </S.Item>
+          </S.ListaCarrinho>
+          {/* ) : ( */}
+          {/* <S.ListaVazia>
               <S.ListaVaziaMessage>
                 Seu carrinho está vazio...
               </S.ListaVaziaMessage>
               <S.PsyDuck src={psyduck} alt="imagem de pokemon" />
-            </S.ListaVazia>
-          )}
+            </S.ListaVazia> */}
+          {/* )} */}
 
-          {carrinho.length > 0 && (
-            <S.BtnContainer>
-              <S.ComprarContent>
-                <S.ComprarBtn>Continuar comprando</S.ComprarBtn>
-              </S.ComprarContent>
-              <S.TotalContent>
-                <S.Total>Total: R$ 40.000,00</S.Total>
-                <S.FinalizarBtn onClick={() => handleCarrinhoModal()}>
-                  Finalizar compra
-                </S.FinalizarBtn>
-              </S.TotalContent>
-            </S.BtnContainer>
-          )}
+          {/* {carrinho.length > 0 && ( */}
+          <S.BtnContainer>
+            <S.ComprarContent>
+              <S.ComprarBtn>Continuar comprando</S.ComprarBtn>
+            </S.ComprarContent>
+            <S.TotalContent>
+              <S.Total>Total: R$ 40.000,00</S.Total>
+              <S.FinalizarBtn onClick={() => handleCarrinhoModal()}>
+                Finalizar compra
+              </S.FinalizarBtn>
+            </S.TotalContent>
+          </S.BtnContainer>
+          {/* )} */}
         </S.Content>
       </S.Container>
       {carrinhoModal && <CarrinhoModal onClick={handleCarrinhoModal} />}
