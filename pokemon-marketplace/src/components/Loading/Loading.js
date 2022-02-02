@@ -9,9 +9,9 @@ function Loading(){
       <S.Container>
          <S.Content>
              <S.Text>
-                 <S.tittle src={Load}/>                                          
+                 <S.tittle src={Load} alt="Loading"/>                                          
             </S.Text>
-             <S.LoadImage src={loadImg}/>
+             <S.LoadImage src={loadImg} alt="PokemonTrainer"/>
          </S.Content>
       </S.Container>
 

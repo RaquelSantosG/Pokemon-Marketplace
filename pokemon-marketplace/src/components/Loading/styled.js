@@ -15,12 +15,11 @@ export const Container = styled.div `
 export const Content = styled.div `
 
  height: 10rem;  //17
- background-color: #fff;
  width: 15rem; //30
  border-radius:15px;
  display: flex;
  padding:2rem;
- box-shadow: 0px 7px 9px 5px rgba(0,0,0,0.57);
+ box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.79);
  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ30RMxueo7sRAoKtpd2AqNMZD6TRIdyG5oE3UR88IB-Okm8D6xRvJxXA9bteNIQidOqeM&usqp=CAU)
  
  
@@ -37,6 +36,7 @@ export const tittle = styled.img`
 height: 5rem;
  width: 6em;
 margin-left: 2.5rem;
+
  
 `;
 
