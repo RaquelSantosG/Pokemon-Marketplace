@@ -1,21 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import * as S from './styled';
-
 import Details from '../DetailsModal/Details';
+import Loading from '../Loading/Loading';
 import { useDispatch, useSelector } from 'react-redux';
-
 import { getPokemonsRequest } from '../../redux/actions/pokeApiActions';
 
 function Home() {
   const storage = useSelector((state) => state.pokemons);
   const dispatch = useDispatch();
-
   const [pokemonsSagas, setPokemonsSagas] = useState([]);
+  const [modal, setModal] = useState(false);
+  const [pokemonSelected, setPokemonSelected] = useState({});
+  const [loading , setLoading] = useState(true);
 
   useEffect(() => {
     if (storage.pokemons !== undefined) {
       setPokemonsSagas(storage.pokemons);
+      setLoading(false);
     }
+
     console.log('storage:', storage.pokemons);
   }, [storage.pokemons]);
 
@@ -24,8 +27,7 @@ function Home() {
     //getPokemons();
   }, []);
 
-  const [modal, setModal] = useState(false);
-  const [pokemonSelected, setPokemonSelected] = useState({});
+  if(loading) return <Loading />
 
   return (
     <S.Container>
