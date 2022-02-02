@@ -5,7 +5,6 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [logged, setLogged] = useState(true);
   const user = { email: 'admin@gmail.com', senha: 'admin' };
-  console.log(logged);
 
   return (
     <AuthContext.Provider value={{ logged, setLogged, user }}>

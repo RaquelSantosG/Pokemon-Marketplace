@@ -1,6 +1,21 @@
 import styled from 'styled-components';
 import { BsFillTrashFill } from 'react-icons/bs';
 
+export const ListaVazia = styled.div`
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`;
+
+export const PsyDuck = styled.img`
+  height: 13rem;
+`;
+
+export const ListaVaziaMessage = styled.h3`
+  font-size: 1.5rem;
+`;
+
 export const Container = styled.div`
   margin-top: 1.5rem;
   padding: 1rem;
