@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import img from '../../assets/Amb.png';
-import Pgo from '../../assets/Pokemarket.jpg';
-import back from '../../assets/background1.png';
+
 
 export const Container = styled.div`
   position: fixed;
