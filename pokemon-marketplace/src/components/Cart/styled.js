@@ -74,6 +74,7 @@ export const Item = styled.li`
   border-radius: 10px;
   margin-bottom: 1rem;
   box-shadow: 0px 11px 11px -10px rgba(0, 0, 0, 0.85);
+  border: 4px solid #23296f;
 `;
 
 export const Tabela = styled.table`
@@ -90,6 +91,7 @@ export const Dado = styled.td`
 export const Name = styled.h4`
   font-size: 1.3rem;
   color: #342e2d;
+  text-transform: capitalize;
 `;
 
 export const Imagem = styled.img`

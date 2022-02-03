@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   margin-top: 3rem;
   background-color: #b5c9f9;
-  padding: 3rem;
+  padding: 1rem;
   border-radius: 10px;
 `;
 
@@ -20,7 +20,6 @@ export const Item = styled.li`
 export const Card = styled.div`
   height: 23rem;
   width: 100%;
-  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 5px 6px 1px rgba(0, 0, 0, 0.4);
   padding: 10px 2rem;
@@ -30,6 +29,7 @@ export const Card = styled.div`
   cursor: pointer;
   outline: 4px solid #fed000;
   transition: all 0.1s;
+  border: 7px solid #fff;
   background: linear-gradient(
     180deg,
     rgba(255, 215, 122, 1) 0%,
@@ -53,7 +53,6 @@ export const CardInfos = styled.div`
 export const Imagem = styled.img`
   height: 140px;
   width: 140px;
-  margin-bottom: 0.1rem;
 `;
 
 export const Title = styled.h4`
@@ -76,7 +75,7 @@ export const Detalhes = styled.p`
 export const Preco = styled.p`
   color: #6c605e;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 `;
 
 export const Carrinho = styled.button`

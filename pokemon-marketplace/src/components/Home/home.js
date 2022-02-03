@@ -11,23 +11,20 @@ function Home() {
   const [pokemonsSagas, setPokemonsSagas] = useState([]);
   const [modal, setModal] = useState(false);
   const [pokemonSelected, setPokemonSelected] = useState({});
-  const [loading , setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (storage.pokemons !== undefined) {
       setPokemonsSagas(storage.pokemons);
       setLoading(false);
     }
-
-    console.log('storage:', storage.pokemons);
   }, [storage.pokemons]);
 
   useEffect(() => {
     dispatch(getPokemonsRequest());
-    //getPokemons();
-  }, []);
+  }, [dispatch]);
 
-  if(loading) return <Loading />
+  if (loading) return <Loading />;
 
   return (
     <S.Container>

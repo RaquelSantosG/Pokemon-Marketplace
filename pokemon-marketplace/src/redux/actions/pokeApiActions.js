@@ -1,5 +1,10 @@
-import { GET_POKEMONS } from './pokeApiTypes';
+import { pokemonApiTypes } from './pokeApiTypes';
 
 export const getPokemonsRequest = () => ({
-  type: GET_POKEMONS,
+  type: pokemonApiTypes.GET_POKEMONS,
+});
+
+export const addPokemons = (payload) => ({
+  type: pokemonApiTypes.ADD_POKEMONS,
+  payload,
 });

@@ -12,6 +12,8 @@ export const Input = styled.input`
   border: none;
   outline: 2px solid #cecece;
   margin: 5px;
+  text-align: center;
+  font-size: 1rem;
 `;
 
 export const Operacao = styled.button`

@@ -21,11 +21,11 @@ function HeaderContent() {
     <S.ContentBar>
       <S.Login>Bem Vindo: {user.email}</S.Login>
       <S.Btn onClick={() => navigate('/carrinho')}>
-        {/* {Number(counter) > 0 && ( */}
-        <S.ContadorContainer>
-          <S.Contador>{counter}</S.Contador>
-        </S.ContadorContainer>
-        {/* )} */}
+        {Number(counter) > 0 && (
+          <S.ContadorContainer>
+            <S.Contador>{counter}</S.Contador>
+          </S.ContadorContainer>
+        )}
         <S.Cart size={30} />
       </S.Btn>
       <S.Btn onClick={() => navigate('/profile')}>

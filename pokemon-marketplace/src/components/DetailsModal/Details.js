@@ -2,6 +2,7 @@ import React from 'react';
 import * as S from './styled';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { addPokemon } from '../../redux/actions/cartAction';
 
 function Details({ pokemon, modal, setModal }) {
   const listaMovimentos = pokemon.moves.map((el) => el.move.name);
@@ -9,9 +10,18 @@ function Details({ pokemon, modal, setModal }) {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  //const [pokemonCart, setPokemonCart] = useState({});
 
   const handleClick = () => {
-    dispatch({ type: 'ADD_POKEMON' });
+    dispatch(
+      addPokemon({
+        image: pokemon.sprites.front_default,
+        name: pokemon.name,
+        price: pokemon.weight,
+        amount: 1,
+        total: pokemon.weight,
+      })
+    );
     navigate('/carrinho');
   };
 
@@ -31,7 +41,7 @@ function Details({ pokemon, modal, setModal }) {
           <S.FeatureTitle>Movimentos:</S.FeatureTitle>
           <S.Feature> {listaMovimentos} </S.Feature>
           <S.AddContent>
-            <S.Preco>Preço: {pokemon.weight},00</S.Preco>
+            <S.Preco>Preço: R$ {pokemon.weight},00</S.Preco>
             <S.Carrinho onClick={() => handleClick()}>
               Adicionar ao carrinho
             </S.Carrinho>

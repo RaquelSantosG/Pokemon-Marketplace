@@ -1,2 +1,4 @@
-export const GET_POKEMONS = 'GET_POKEMONS';
-export const ADD_POKEMONS = 'ADD_POKEMONS';
+export const pokemonApiTypes = {
+  GET_POKEMONS: '@API/GET_POKEMONS',
+  ADD_POKEMONS: '@API/ADD_POKEMONS',
+};

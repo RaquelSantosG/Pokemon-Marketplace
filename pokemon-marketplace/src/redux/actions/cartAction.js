@@ -1,16 +1,26 @@
-import { ADD_POKEMON, DELETE_POKEMON, GET_COUNTER } from './cartTypes';
+import { cartTypes } from './cartTypes';
 
 export const addPokemon = (payload) => ({
-  type: ADD_POKEMON,
+  type: cartTypes.ADD_POKEMONS,
   payload,
 });
 
 export const deletePokemon = (payload) => ({
-  type: DELETE_POKEMON,
+  type: cartTypes.DELETE_POKEMON,
   payload,
 });
 
-export const getCounter = (payload) => ({
-  type: GET_COUNTER,
+export const resetPokemon = (payload) => ({
+  type: cartTypes.RESET_LIST,
+  payload,
+});
+
+export const increaseAmount = (payload) => ({
+  type: cartTypes.INCREASE_AMOUNT,
+  payload,
+});
+
+export const decreaseAmount = (payload) => ({
+  type: cartTypes.DECREASE_AMOUNT,
   payload,
 });

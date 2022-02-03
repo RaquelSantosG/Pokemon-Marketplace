@@ -1,3 +1,6 @@
+import { addPokemons } from '../actions/pokeApiActions';
+import { pokemonApiTypes } from '../actions/pokeApiTypes';
+
 import {
   //fork,
   put,
@@ -28,23 +31,10 @@ function* getAllPokemons() {
       const details = yield call(fetchPokemons, el.url);
       listDetails.push(details);
     }
-    console.log('listagem', listDetails);
-    yield put({ type: 'ADD_POKEMONS', payload: listDetails });
+    yield put(addPokemons(listDetails));
   } catch (error) {
     console.log(error);
   }
 }
 
-// function* funcTake() {
-//   console.log('funcTake');
-//   const action = yield take('GET_POKEMONS');
-//   console.log(action);
-//   yield takeEvery('CALL_SAGAS', getAllPokemons);
-// }
-
-// function* funcTakeLast() {
-//   console.log('funcTakeLast');
-//   yield takeLatest('CALL_SAGA', getAllPokemons);
-// }
-
-export default all([takeLatest('GET_POKEMONS', getAllPokemons)]);
+export default all([takeLatest(pokemonApiTypes.GET_POKEMONS, getAllPokemons)]);
