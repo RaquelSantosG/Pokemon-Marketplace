@@ -4,6 +4,7 @@ import Details from '../DetailsModal/Details';
 import Loading from '../Loading/Loading';
 import { useDispatch, useSelector } from 'react-redux';
 import { getPokemonsRequest } from '../../redux/actions/pokeApiActions';
+import {FaShoppingCart} from 'react-icons/fa';
 
 function Home() {
   const storage = useSelector((state) => state.pokemons);
@@ -54,7 +55,8 @@ function Home() {
                     setModal(!modal);
                   }}
                 >
-                  Adicionar ao carrinho
+                <FaShoppingCart size={18} style={{marginRight:'0.5rem'}} />
+                  Adicionar
                 </S.Carrinho>
               </S.CardInfos>
             </S.Card>

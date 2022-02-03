@@ -79,17 +79,20 @@ export const Preco = styled.p`
 `;
 
 export const Carrinho = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
-  padding: 1rem 0;
+  padding: 0.7rem 0;
   margin-bottom: 2rem;
-  background-color: #717171;
+  background-color: #4FB3AB;
   border-radius: 5px;
   color: #fff;
   font-weight: bold;
   transition: all 0.5s;
 
   &:hover {
-    background-color: #4f4a49;
+    background-color: #0F5B55;
     box-shadow: 0px 13px 7px -10px rgba(0, 0, 0, 0.84);
     transform: translateY(-3px);
   }
