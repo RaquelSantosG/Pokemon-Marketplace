@@ -23,10 +23,12 @@ const cartReducer = (state = initialState, action) => {
             ? samePokemon.amount
             : samePokemon.amount + 1;
 
+        console.log(samePokemon.amount);
+
         list[sameIndex] = {
           ...samePokemon,
           amount: newPokemonAmount,
-          total: newPokemonAmount * samePokemon.total,
+          total: newPokemonAmount * samePokemon.price,
         };
       }
 
