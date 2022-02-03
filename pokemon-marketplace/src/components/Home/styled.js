@@ -43,11 +43,18 @@ export const Card = styled.div`
 `;
 
 export const CardInfos = styled.div`
+  padding: 0.5rem 0 0;
   display: flex;
   flex-direction: column;
   text-align: center;
   height: 10rem;
-  padding-top: 0.5rem;
+  padding-top: 0.1rem 0.5rem;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 207, 48, 1) 0%,
+    rgba(255, 248, 0, 1) 100%
+  );
 `;
 
 export const Imagem = styled.img`
@@ -85,14 +92,14 @@ export const Carrinho = styled.button`
   border: none;
   padding: 0.7rem 0;
   margin-bottom: 2rem;
-  background-color: #4FB3AB;
+  background-color: #4fb3ab;
   border-radius: 5px;
   color: #fff;
   font-weight: bold;
   transition: all 0.5s;
 
   &:hover {
-    background-color: #0F5B55;
+    background-color: #0f5b55;
     box-shadow: 0px 13px 7px -10px rgba(0, 0, 0, 0.84);
     transform: translateY(-3px);
   }
