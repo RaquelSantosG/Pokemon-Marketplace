@@ -1,22 +1,22 @@
 import React from 'react';
 import * as S from './styled';
 import { useDispatch } from 'react-redux';
-import { addPokemon } from '../../redux/actions/cartAction';
+import { addPokemon, decreaseAmount } from '../../redux/actions/cartAction';
 
 function AmountInput({ amount, pokemonName }) {
   const dispatch = useDispatch();
 
-  const increaseAmount = (name) => {
-    dispatch(addPokemon(name));
+  const increaseAmount = (pokemonName) => {
+    dispatch(addPokemon({ name: pokemonName }));
   };
 
-  // const decrease = () => {
-  //   dispatch({ type: 'DECREASE_AMOUNT' });
-  // };
+  const decrease = (pokemonName) => {
+    dispatch(decreaseAmount({ name: pokemonName }));
+  };
 
   return (
     <S.Container>
-      <S.Operacao>-</S.Operacao>
+      <S.Operacao onClick={() => decrease(pokemonName)}>-</S.Operacao>
       <S.Input type="text" disabled={true} value={amount} />
       <S.Operacao onClick={() => increaseAmount(pokemonName)}>+</S.Operacao>
     </S.Container>

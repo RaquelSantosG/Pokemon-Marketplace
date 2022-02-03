@@ -11,17 +11,22 @@ const cartReducer = (state = initialState, action) => {
   switch (action.type) {
     case cartTypes.ADD_POKEMONS:
       list = state.list;
-      console.log(action.payload.name);
+
       let sameIndex = list.findIndex((el) => el.name === action.payload.name);
 
-      if (sameIndex === -1 && action.payload.name !== undefined) {
+      if (sameIndex === -1) {
         list.push(action.payload);
       } else {
         const samePokemon = list[sameIndex];
+        let newPokemonAmount =
+          samePokemon.amount === 10
+            ? samePokemon.amount
+            : samePokemon.amount + 1;
+
         list[sameIndex] = {
           ...samePokemon,
-          amount: samePokemon.amount + 1,
-          total: samePokemon.amount * samePokemon.total,
+          amount: newPokemonAmount,
+          total: newPokemonAmount * samePokemon.total,
         };
       }
 
@@ -31,23 +36,47 @@ const cartReducer = (state = initialState, action) => {
         count: list.length,
       };
     case cartTypes.DELETE_POKEMON:
-      list = state.list.filter((pokemon) => pokemon.name !== action.payload);
+      list = state.list;
+      sameIndex = state.list.findIndex(
+        (pokemon) => pokemon.name === action.payload.name
+      );
+
+      const samePokemon = list[sameIndex];
+      let newPokemonAmount =
+        samePokemon.amount === 1 ? samePokemon.amount : samePokemon.amount - 1;
+
+      list[sameIndex] = {
+        ...samePokemon,
+        amount: newPokemonAmount,
+        total: newPokemonAmount * samePokemon.total,
+      };
 
       return {
         ...state,
         list: list,
         count: state.count === 0 ? state.count : state.count - 1,
       };
-    // case cartTypes.INCREASE_AMOUNT:
-    //   list = state.list;
-    //   sameIndex = list.findIndex((el) => el.name === action.payload.name);
-    //   const samePokemon = list[sameIndex];
-    //   list[sameIndex] = { ...samePokemon, amount: samePokemon.amount + 1 };
+    case cartTypes.DECREASE_AMOUNT:
+      list = state.list;
+      let pokemonSameIndex = list.findIndex(
+        (pokemon) => pokemon.name === action.payload.name
+      );
 
-    //   return {
-    //     ...state,
-    //     list: list,
-    //   };
+      const pokemon = list[pokemonSameIndex];
+
+      let newAmount =
+        pokemon.amount === 1 ? pokemon.amount : pokemon.amount - 1;
+
+      list[pokemonSameIndex] = {
+        ...pokemon,
+        amount: newAmount,
+        total: newAmount * pokemon.price,
+      };
+
+      return {
+        ...state,
+        list: list,
+      };
     case cartTypes.RESET_LIST:
       return {
         ...state,

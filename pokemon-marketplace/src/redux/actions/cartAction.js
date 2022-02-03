@@ -15,11 +15,6 @@ export const resetPokemon = (payload) => ({
   payload,
 });
 
-export const increaseAmount = (payload) => ({
-  type: cartTypes.INCREASE_AMOUNT,
-  payload,
-});
-
 export const decreaseAmount = (payload) => ({
   type: cartTypes.DECREASE_AMOUNT,
   payload,

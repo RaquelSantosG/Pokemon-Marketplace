@@ -30,6 +30,8 @@ function Cart() {
   };
 
   useEffect(() => {
+    console.log(storage);
+
     if (storage.cart.list !== undefined) {
       setCarrinho(storage.cart.list);
     }
