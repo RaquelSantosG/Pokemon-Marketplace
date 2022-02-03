@@ -3,6 +3,10 @@ import * as S from './styled';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addPokemon } from '../../redux/actions/cartAction';
+import {FaShoppingCart} from 'react-icons/fa';
+import {GiTwoCoins} from 'react-icons/gi'
+import {MdCatchingPokemon} from 'react-icons/md'
+
 
 function Details({ pokemon, modal, setModal }) {
   const listaMovimentos = pokemon.moves.map((el) => el.move.name);
@@ -36,14 +40,20 @@ function Details({ pokemon, modal, setModal }) {
           />
         </S.LeftColumn>
         <S.RightColumn>
-          <S.Name>{pokemon.name}</S.Name>
+          <S.Name>
+            <MdCatchingPokemon style={{marginRight: 8}} size={25}/>
+            {pokemon.name}
+            </S.Name>
           <S.Type>Tipo: {pokemon.types[0].type.name} </S.Type>
           <S.FeatureTitle>Movimentos:</S.FeatureTitle>
           <S.Feature> {listaMovimentos} </S.Feature>
           <S.AddContent>
-            <S.Preco>Preço: R$ {pokemon.weight},00</S.Preco>
+            <S.Preco>
+            <GiTwoCoins style={{marginRight: 8}} size={25}/>
+              Preço: R$ {pokemon.weight},00</S.Preco>
             <S.Carrinho onClick={() => handleClick()}>
-              Adicionar ao carrinho
+              <FaShoppingCart style={{marginRight: 8}} size={18}/>
+                Adicionar
             </S.Carrinho>
           </S.AddContent>
         </S.RightColumn>
