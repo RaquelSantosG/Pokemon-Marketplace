@@ -1,33 +1,16 @@
 import React from 'react';
 import * as S from './styled';
-import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { addPokemon } from '../../redux/actions/cartAction';
 import {FaShoppingCart} from 'react-icons/fa';
-import {GiTwoCoins} from 'react-icons/gi'
-import {MdCatchingPokemon} from 'react-icons/md'
-
+import {GiTwoCoins} from 'react-icons/gi';
+import {MdCatchingPokemon} from 'react-icons/md';
+import {useDetails} from '../../hooks/useDetails';
 
 function Details({ pokemon, modal, setModal }) {
-  const listaMovimentos = pokemon.moves.map((el) => el.move.name);
-  listaMovimentos.join(', ');
-
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  //const [pokemonCart, setPokemonCart] = useState({});
-
-  const handleClick = () => {
-    dispatch(
-      addPokemon({
-        image: pokemon.sprites.front_default,
-        name: pokemon.name,
-        price: pokemon.weight,
-        amount: 1,
-        total: pokemon.weight,
-      })
-    );
-    navigate('/carrinho');
-  };
+ 
+const {
+  handleClick,
+  listaMovimentos,
+} = useDetails(pokemon);
 
   return (
     <S.Container>
