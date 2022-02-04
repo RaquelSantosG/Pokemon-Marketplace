@@ -70,7 +70,11 @@ export const ListaCarrinho = styled.ul`
 
 export const Item = styled.li`
   padding: 0.5rem 0;
-  background-color: #7cc0ea;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(186, 234, 242, 1) 100%
+  );
   border-radius: 10px;
   margin-bottom: 1rem;
   box-shadow: 0px 11px 11px -10px rgba(0, 0, 0, 0.85);
@@ -100,7 +104,7 @@ export const Imagem = styled.img`
 `;
 
 export const Valor = styled.h4`
-  font-size: 0.9rem;
+  font-size: 1.1em;
   color: #342e2d;
   font-weight: bold;
 `;

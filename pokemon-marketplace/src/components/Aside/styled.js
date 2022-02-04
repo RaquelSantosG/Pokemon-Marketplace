@@ -7,6 +7,8 @@ export const MenuContainer = styled.div`
   position: relative;
   bottom: 0;
   left: 0;
+
+  box-shadow: 4px 0px 7px -1px rgba(0, 0, 0, 0.2);
 `;
 
 export const LogoContainer = styled.div`
@@ -20,10 +22,23 @@ export const Logo = styled.img`
   height: 4rem;
 `;
 
-export const Menu = styled.nav`
-  margin-top: 8.8vh;
+export const PikajuContainer = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom: 1.5rem;
+`;
+
+export const Pikaju = styled.img`
+  width: 3.5rem;
+  position: absolute;
+  bottom: 0px;
+`;
+
+export const Menu = styled.nav`
+  margin-top: 6vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
 `;
 
 export const MenuContent = styled.ul`
@@ -36,6 +51,7 @@ export const MenuContent = styled.ul`
   padding: 1.3rem 0;
   border-radius: 0.6rem;
   width: 86%;
+  height: 45vh;
   box-shadow: 0px 2px 7px -1px rgba(0, 0, 0, 0.5);
 
   &:hover {
@@ -53,8 +69,8 @@ export const MenuItem = styled.li`
 
   &:hover {
     background-color: #f8fbae;
-    border-radius: 10px;
-    box-shadow: 0px 10px 7px -7px rgba(0, 0, 0, 0.5);
+
+    box-shadow: 0px 7px 7px -7px rgba(0, 0, 0, 0.5);
     transform: translateY(-4px);
   }
 

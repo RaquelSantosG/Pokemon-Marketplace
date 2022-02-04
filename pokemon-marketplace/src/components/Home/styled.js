@@ -5,12 +5,14 @@ export const Container = styled.div`
   background-color: #b5c9f9;
   padding: 1rem;
   border-radius: 10px;
+  box-shadow: 0px 5px 4px -1px rgba(0, 0, 0, 0.4);
 `;
 
 export const Lista = styled.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 `;
 
 export const Item = styled.li`
@@ -43,7 +45,6 @@ export const Card = styled.div`
 `;
 
 export const CardInfos = styled.div`
-  padding: 0.5rem 0 0;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -63,24 +64,32 @@ export const Imagem = styled.img`
 `;
 
 export const Title = styled.h4`
-  color: #6c605e;
+  color: #0f5b55;
+  padding: 0.4rem 0;
   margin-bottom: 1rem;
+  font-weight: bold;
   text-transform: capitalize;
+  border-bottom: 2px solid #0f5b55;
+  background-color: rgba(236, 255, 0, 0.4);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 `;
 
 export const Tipo = styled.p`
-  color: #6c605e;
+  color: #0f5b55;
   font-size: 0.9rem;
+  font-weight: bold;
   margin-bottom: 0.4rem;
 `;
 
 export const Detalhes = styled.p`
-  color: #6c605e;
+  color: #0f5b55;
   margin-bottom: 1rem;
+  font-weight: bold;
 `;
 
 export const Preco = styled.p`
-  color: #6c605e;
+  color: #0f5b55;
   font-weight: bold;
   margin-bottom: 0.5rem;
 `;

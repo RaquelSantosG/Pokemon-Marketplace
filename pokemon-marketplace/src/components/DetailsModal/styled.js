@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import img from '../../assets/Amb.png';
 
-
 export const Container = styled.div`
   position: fixed;
   z-index: 100;
@@ -53,9 +52,6 @@ export const LeftColumn = styled.div`
   background-image: url(${img});
   background-size: 1000px;
   background-position: center;
-  
-
- 
 `;
 
 export const RightColumn = styled.div`
@@ -64,9 +60,15 @@ export const RightColumn = styled.div`
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 2.5rem 1.5rem;
-  box-shadow:-7px 5px 11px 0px rgba(0,0,0,0.55);
- 
-  background: linear-gradient(0deg, rgba(215,196,164,1) 14%, rgba(127,190,97,1) 35%, rgba(127,190,97,1) 66%, rgba(116,196,247,1) 80%);
+  box-shadow: -7px 5px 11px 0px rgba(0, 0, 0, 0.55);
+
+  background: linear-gradient(
+    0deg,
+    rgba(215, 196, 164, 1) 14%,
+    rgba(127, 190, 97, 1) 35%,
+    rgba(127, 190, 97, 1) 66%,
+    rgba(116, 196, 247, 1) 80%
+  );
 `;
 
 export const Name = styled.h4`
@@ -77,7 +79,7 @@ export const Name = styled.h4`
   background-color: #fff;
   width: 100%;
   padding: 0.5rem 0.5rem;
- 
+
   border-radius: 10px;
   font-size: 1.1rem;
   text-transform: uppercase;
@@ -87,17 +89,14 @@ export const Name = styled.h4`
 export const Type = styled.h4`
   color: #000;
   margin-bottom: 1rem;
-  
 `;
 
 export const FeatureTitle = styled.h4`
-   color: #000;;
+  color: #000;
   margin-bottom: 0.5rem;
-  
 `;
 
 export const Feature = styled.p`
-
   color: #000;
   font-size: 0.9rem;
   margin-bottom: 2rem;

@@ -5,6 +5,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 import logo from '../../assets/pokeapi_logo.png';
+import pikaju from '../../assets/pikachuball.gif';
 
 function Aside() {
   return (
@@ -18,7 +19,7 @@ function Aside() {
           <S.MenuItem>
             <Link to="/" style={{ textDecoration: 'none' }}>
               <S.Content>
-                <MdHome size={32} style={{ marginRight: '.5rem' }} />
+                <MdHome size={35} style={{ marginRight: '.5rem' }} />
                 Home
               </S.Content>
             </Link>
@@ -26,7 +27,7 @@ function Aside() {
           <S.MenuItem>
             <Link to="/carrinho" style={{ textDecoration: 'none' }}>
               <S.Content>
-                <FaShoppingCart size={25} style={{ marginRight: '.5rem' }} />
+                <FaShoppingCart size={28} style={{ marginRight: '.5rem' }} />
                 Poke Cart
               </S.Content>
             </Link>
@@ -39,6 +40,9 @@ function Aside() {
               </S.Content>
             </Link>
           </S.MenuItem>
+          <S.PikajuContainer>
+            <S.Pikaju src={pikaju} alt="pikaju" />
+          </S.PikajuContainer>
         </S.MenuContent>
       </S.Menu>
     </S.MenuContainer>
