@@ -1,27 +1,21 @@
-import React, { useContext, useState } from 'react';
+import React from 'react';
 import * as S from './styled';
 import logo from '../../assets/pokeapi_logo.png';
 import TextInput from '../TextInput/TextInput';
-import { useAuth } from '../../context/AuthContext';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useLogin } from '../../hooks/useLogin';
 
 function Login() {
-  const [email, setEmail] = useState('');
-  const [senha, setSenha] = useState('');
-  const { setLogged } = useAuth();
-
-  //const { setLogged } = useContext(AuthContext);
-
-  const onSubmit = (e) => {
-    if (email === 'admin' && senha === 'admin') {
-      setLogged(true);
-    } else {
-      toast.error('Email ou Senha inválidos');
-    }
-    e.preventDefault();
-  };
-
+ 
+const{
+  email,
+  setEmail,
+  senha,
+  setSenha,
+  onSubmit,
+} = useLogin(); 
+  
   return (
     <S.Container>
       <S.Content>
