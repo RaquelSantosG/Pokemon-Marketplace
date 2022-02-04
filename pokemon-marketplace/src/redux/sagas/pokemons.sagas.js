@@ -1,24 +1,13 @@
 import { addPokemons } from '../actions/pokeApiActions';
 import { pokemonApiTypes } from '../actions/pokeApiTypes';
 
-import {
-  //fork,
-  put,
-  take,
-  takeEvery,
-  //race,
-  takeLatest,
-  call,
-  all,
-  //delay,
-} from 'redux-saga/effects';
+import { put, takeLatest, call, all } from 'redux-saga/effects';
 
 const fetchPokemons = async (url) => {
   return await fetch(url).then((res) => res.json());
 };
 
 function* getAllPokemons() {
-  console.log('Entrou!');
   try {
     const pokemons = yield call(
       fetchPokemons,

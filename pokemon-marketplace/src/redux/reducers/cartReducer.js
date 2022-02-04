@@ -39,23 +39,29 @@ const cartReducer = (state = initialState, action) => {
       };
     case cartTypes.DELETE_POKEMON:
       list = state.list;
-      sameIndex = state.list.findIndex(
-        (pokemon) => pokemon.name === action.payload.name
+
+      let sameIndexPoke = state.list.findIndex(
+        (pokemon) => pokemon.name === action.payload
       );
 
-      const samePokemon = list[sameIndex];
-      let newPokemonAmount =
-        samePokemon.amount === 1 ? samePokemon.amount : samePokemon.amount - 1;
+      const samePoke = list[sameIndexPoke];
 
-      list[sameIndex] = {
-        ...samePokemon,
+      let newPokemonAmount =
+        samePoke.amount === 1 ? samePoke.amount : samePoke.amount - 1;
+
+      list[sameIndexPoke] = {
+        ...samePoke,
         amount: newPokemonAmount,
-        total: newPokemonAmount * samePokemon.total,
+        total: newPokemonAmount * samePoke.total,
       };
+
+      let delPokemon = list.filter(
+        (pokemon) => pokemon.name !== action.payload
+      );
 
       return {
         ...state,
-        list: list,
+        list: delPokemon,
         count: state.count === 0 ? state.count : state.count - 1,
       };
     case cartTypes.DECREASE_AMOUNT:

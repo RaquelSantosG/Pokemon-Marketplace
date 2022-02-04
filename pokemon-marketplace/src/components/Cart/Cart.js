@@ -1,45 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
 import * as S from './styled';
+
 import AmountInput from '../AmountInput/AmountInput';
 import CarrinhoModal from '../CarrinhoModal/CarrinhoModal';
 import psyduck from '../../assets/psyduck.png';
-import { deletePokemon, resetPokemon } from '../../redux/actions/cartAction';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useCart } from '../../hooks/useCart';
 
 function Cart() {
-  const [carrinhoModal, setCarrinhoModal] = useState(false);
-  const [carrinho, setCarrinho] = useState([]);
-  const [total, setTotal] = useState(0);
-
-  const navigate = useNavigate();
-  const storage = useSelector((state) => state);
-  const dispatch = useDispatch();
-
-  const delPokemon = (name) => {
-    dispatch(deletePokemon(name));
-  };
-
-  function handleCarrinhoModal() {
-    setCarrinhoModal(!carrinhoModal);
-  }
-
-  const handleCart = () => {
-    dispatch(resetPokemon());
-  };
-
-  useEffect(() => {
-    console.log(storage);
-
-    if (storage.cart.list !== undefined) {
-      setCarrinho(storage.cart.list);
-    }
-
-    let totais = storage.cart.list.map((pokemon) => pokemon.total);
-    let total = totais.reduce((total, numero) => total + numero, 0);
-    setTotal(total);
-  }, [storage]);
+  const {
+    carrinho,
+    carrinhoModal,
+    delPokemon,
+    navigate,
+    handleCarrinhoModal,
+    handleCart,
+    total,
+  } = useCart();
 
   return (
     <>
