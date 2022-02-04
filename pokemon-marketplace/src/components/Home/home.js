@@ -1,30 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import * as S from './styled';
 import Details from '../DetailsModal/Details';
 import Loading from '../Loading/Loading';
-import { useDispatch, useSelector } from 'react-redux';
-import { getPokemonsRequest } from '../../redux/actions/pokeApiActions';
 import {FaShoppingCart} from 'react-icons/fa';
+import {usePokeApi} from '../../hooks/usePokeApi';
 
 function Home() {
-  const storage = useSelector((state) => state.pokemons);
-  const dispatch = useDispatch();
-  const [pokemonsSagas, setPokemonsSagas] = useState([]);
-  const [modal, setModal] = useState(false);
-  const [pokemonSelected, setPokemonSelected] = useState({});
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    if (storage.pokemons !== undefined) {
-      setPokemonsSagas(storage.pokemons);
-      setLoading(false);
-    }
-  }, [storage.pokemons]);
-
-  useEffect(() => {
-    dispatch(getPokemonsRequest());
-  }, [dispatch]);
-
+  const{
+    pokemonsSagas,
+    modal,
+    setModal,
+    loading,
+    pokemonSelected,
+    setPokemonSelected,
+  } = usePokeApi();
+  
   if (loading) return <Loading />;
 
   return (
