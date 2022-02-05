@@ -29,7 +29,7 @@ function EasterEgg({ modalEasterEgg, setModalEasterEgg }) {
               Raquel Gomes
             </S.TreinadorNome>
             <S.TreinadorNome>André Leão</S.TreinadorNome>
-            <S.TreinadorNome>Mathues Albuquerque</S.TreinadorNome>
+            <S.TreinadorNome>Matheus Albuquerque</S.TreinadorNome>
           </S.NomesContainer>
         </S.RightColumn>
       </S.Content>
