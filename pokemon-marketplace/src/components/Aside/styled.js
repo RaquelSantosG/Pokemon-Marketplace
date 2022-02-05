@@ -32,6 +32,7 @@ export const Pikaju = styled.img`
   width: 3.5rem;
   position: absolute;
   bottom: 0px;
+  cursor: pointer;
 `;
 
 export const Menu = styled.nav`

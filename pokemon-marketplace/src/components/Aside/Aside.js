@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as S from './styled';
 import { MdHome, MdPerson } from 'react-icons/md';
 import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
+import EasterEgg from '../EasterEgg/EasterEgg';
+
 import logo from '../../assets/pokeapi_logo.png';
 import pikaju from '../../assets/pikachuball.gif';
 
 function Aside() {
+  const [modalEasterEgg, setModalEasterEgg] = useState(false);
+
   return (
     <S.MenuContainer>
       <S.LogoContainer>
@@ -40,11 +44,17 @@ function Aside() {
               </S.Content>
             </Link>
           </S.MenuItem>
-          <S.PikajuContainer>
+          <S.PikajuContainer onClick={() => setModalEasterEgg(!modalEasterEgg)}>
             <S.Pikaju src={pikaju} alt="pikaju" />
           </S.PikajuContainer>
         </S.MenuContent>
       </S.Menu>
+      {modalEasterEgg && (
+        <EasterEgg
+          modalEasterEgg={modalEasterEgg}
+          setModalEasterEgg={setModalEasterEgg}
+        />
+      )}
     </S.MenuContainer>
   );
 }

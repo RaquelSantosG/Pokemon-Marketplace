@@ -4,7 +4,11 @@ import Details from '../DetailsModal/Details';
 import Loading from '../Loading/Loading';
 import { FaShoppingCart } from 'react-icons/fa';
 import { usePokeApi } from '../../hooks/usePokeApi';
-import { MdNavigateNext, MdNavigateBefore } from 'react-icons/md';
+import {
+  MdNavigateNext,
+  MdNavigateBefore,
+  MdCatchingPokemon,
+} from 'react-icons/md';
 
 function Home() {
   const {
@@ -22,6 +26,13 @@ function Home() {
 
   return (
     <S.Container>
+      <S.ButtonContainer>
+        <S.PageButton onClick={() => setNext(!next)}>
+          {next ? <MdNavigateBefore size={30} /> : <MdNavigateNext size={30} />}
+          {next ? 'Anterior' : 'Próxima'}
+        </S.PageButton>
+        <MdCatchingPokemon size={45} color={'#fcd1f1'} />
+      </S.ButtonContainer>
       <S.Lista>
         {pokemonsSagas.map((pokemon) => (
           <S.Item key={pokemon.name}>
@@ -56,12 +67,6 @@ function Home() {
           </S.Item>
         ))}
       </S.Lista>
-      <S.ButtonContainer>
-        <S.PageButton onClick={() => setNext(!next)}>
-          {next ? <MdNavigateBefore size={30} /> : <MdNavigateNext size={30} />}
-          {next ? 'Anterior' : 'Próxima'}
-        </S.PageButton>
-      </S.ButtonContainer>
     </S.Container>
   );
 }

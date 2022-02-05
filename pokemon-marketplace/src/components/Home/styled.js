@@ -122,16 +122,20 @@ export const Carrinho = styled.button`
 
 export const ButtonContainer = styled.div`
   display: flex;
-  justify-content: center;
-  margin: 1rem 0;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: #23296f;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.4);
 `;
 
 export const PageButton = styled.button`
   display: flex;
   align-items: center;
-  padding: 1rem;
+  padding: 0.6rem;
   border: none;
-  justify-content: flex-end;
   font-size: 1.2rem;
   background-color: #fcd1f1;
   font-weight: bold;
@@ -139,11 +143,11 @@ export const PageButton = styled.button`
   border-radius: 10px;
   outline: 3px solid #f99ee0;
   transition: all 0.5s;
+  margin-left: 1.4rem;
 
   &:hover {
-    box-shadow: 0px 5px 17px -4px #000000;
     background-color: #f729bf;
     color: #fff;
-    transform: translateY(-3px);
+    transform: translateX(8px);
   }
 `;
