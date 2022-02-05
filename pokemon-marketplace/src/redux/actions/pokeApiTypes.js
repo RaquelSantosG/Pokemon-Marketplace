@@ -1,4 +1,5 @@
 export const pokemonApiTypes = {
   GET_POKEMONS: '@API/GET_POKEMONS',
+  GET_NEXT_POKEMONS: '@API/GET_NEXT_POKEMONS',
   ADD_POKEMONS: '@API/ADD_POKEMONS',
 };

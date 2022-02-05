@@ -26,4 +26,26 @@ function* getAllPokemons() {
   }
 }
 
-export default all([takeLatest(pokemonApiTypes.GET_POKEMONS, getAllPokemons)]);
+function* getNextPagePokemons() {
+  try {
+    const pokemons = yield call(
+      fetchPokemons,
+      'https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20'
+    );
+
+    let listDetails = [];
+
+    for (const el of pokemons.results) {
+      const details = yield call(fetchPokemons, el.url);
+      listDetails.push(details);
+    }
+    yield put(addPokemons(listDetails));
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export default all([
+  takeLatest(pokemonApiTypes.GET_POKEMONS, getAllPokemons),
+  takeLatest(pokemonApiTypes.GET_NEXT_POKEMONS, getNextPagePokemons),
+]);

@@ -2,20 +2,21 @@ import React from 'react';
 import * as S from './styled';
 import Details from '../DetailsModal/Details';
 import Loading from '../Loading/Loading';
-import {FaShoppingCart} from 'react-icons/fa';
-import {usePokeApi} from '../../hooks/usePokeApi';
+import { FaShoppingCart } from 'react-icons/fa';
+import { usePokeApi } from '../../hooks/usePokeApi';
 
 function Home() {
-
-  const{
+  const {
     pokemonsSagas,
     modal,
     setModal,
     loading,
     pokemonSelected,
     setPokemonSelected,
+    next,
+    setNext,
   } = usePokeApi();
-  
+
   if (loading) return <Loading />;
 
   return (
@@ -46,7 +47,7 @@ function Home() {
                     setModal(!modal);
                   }}
                 >
-                <FaShoppingCart size={18} style={{marginRight:'0.5rem'}} />
+                  <FaShoppingCart size={18} style={{ marginRight: '0.5rem' }} />
                   Adicionar
                 </S.Carrinho>
               </S.CardInfos>
@@ -54,6 +55,7 @@ function Home() {
           </S.Item>
         ))}
       </S.Lista>
+      <button onClick={() => setNext(!next)}>NEXT</button>
     </S.Container>
   );
 }
