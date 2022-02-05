@@ -6,6 +6,8 @@ export const Container = styled.div`
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0px 5px 4px -1px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Lista = styled.ul`
@@ -115,5 +117,33 @@ export const Carrinho = styled.button`
 
   &:active {
     box-shadow: 0px 8px 7px -10px rgba(0, 0, 0, 0.84);
+  }
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+`;
+
+export const PageButton = styled.button`
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: none;
+  justify-content: flex-end;
+  font-size: 1.2rem;
+  background-color: #fcd1f1;
+  font-weight: bold;
+  color: #007aff;
+  border-radius: 10px;
+  outline: 3px solid #f99ee0;
+  transition: all 0.5s;
+
+  &:hover {
+    box-shadow: 0px 5px 17px -4px #000000;
+    background-color: #f729bf;
+    color: #fff;
+    transform: translateY(-3px);
   }
 `;

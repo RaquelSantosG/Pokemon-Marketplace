@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   getPokemonsRequest,
@@ -14,21 +14,20 @@ export function usePokeApi() {
   const [loading, setLoading] = useState(true);
   const [next, setNext] = useState(false);
 
-  //storage.pokemons !== undefined
-
   useEffect(() => {
     if (storage.pokemons !== undefined) {
+      setLoading(true);
       setPokemonsSagas(storage.pokemons);
-
       setLoading(false);
     }
   }, [storage.pokemons, dispatch, next]);
 
   useEffect(() => {
     if (next) {
+      setLoading(true);
       dispatch(addNextPokemons());
       setPokemonsSagas(storage.pokemons);
-      console.log(next);
+      setLoading(false);
     }
   }, [dispatch, storage.pokemons, next]);
 

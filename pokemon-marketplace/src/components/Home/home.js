@@ -4,6 +4,7 @@ import Details from '../DetailsModal/Details';
 import Loading from '../Loading/Loading';
 import { FaShoppingCart } from 'react-icons/fa';
 import { usePokeApi } from '../../hooks/usePokeApi';
+import { MdNavigateNext, MdNavigateBefore } from 'react-icons/md';
 
 function Home() {
   const {
@@ -55,7 +56,12 @@ function Home() {
           </S.Item>
         ))}
       </S.Lista>
-      <button onClick={() => setNext(!next)}>NEXT</button>
+      <S.ButtonContainer>
+        <S.PageButton onClick={() => setNext(!next)}>
+          {next ? <MdNavigateBefore size={30} /> : <MdNavigateNext size={30} />}
+          {next ? 'Anterior' : 'Próxima'}
+        </S.PageButton>
+      </S.ButtonContainer>
     </S.Container>
   );
 }
