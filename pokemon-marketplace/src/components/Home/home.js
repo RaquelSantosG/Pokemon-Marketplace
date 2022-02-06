@@ -4,11 +4,7 @@ import Details from '../DetailsModal/Details';
 import Loading from '../Loading/Loading';
 import { FaShoppingCart } from 'react-icons/fa';
 import { usePokeApi } from '../../hooks/usePokeApi';
-import {
-  MdNavigateNext,
-  MdNavigateBefore,
-  MdCatchingPokemon,
-} from 'react-icons/md';
+import { MdCatchingPokemon } from 'react-icons/md';
 
 function Home() {
   const {
