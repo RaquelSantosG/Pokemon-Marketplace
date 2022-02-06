@@ -13,3 +13,8 @@ export const addNextPokemons = (payload) => ({
   type: pokemonApiTypes.GET_NEXT_POKEMONS,
   payload,
 });
+
+export const addThidPagePokemons = (payload) => ({
+  type: pokemonApiTypes.GET_THIRD_PAGE_POKEMONS,
+  payload,
+});

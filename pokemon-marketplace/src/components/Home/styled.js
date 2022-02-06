@@ -131,6 +131,16 @@ export const ButtonContainer = styled.div`
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.4);
 `;
 
+export const Pagina = styled.h5`
+  color: #fff;
+  font-size: 1.2rem;
+`;
+
+export const Buttons = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 export const PageButton = styled.button`
   display: flex;
   align-items: center;
@@ -148,6 +158,6 @@ export const PageButton = styled.button`
   &:hover {
     background-color: #f729bf;
     color: #fff;
-    transform: translateX(8px);
+    transform: translateX(3px);
   }
 `;

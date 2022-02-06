@@ -18,8 +18,8 @@ function Home() {
     loading,
     pokemonSelected,
     setPokemonSelected,
-    next,
     setNext,
+    next,
   } = usePokeApi();
 
   if (loading) return <Loading />;
@@ -27,10 +27,37 @@ function Home() {
   return (
     <S.Container>
       <S.ButtonContainer>
-        <S.PageButton onClick={() => setNext(!next)}>
-          {next ? <MdNavigateBefore size={30} /> : <MdNavigateNext size={30} />}
-          {next ? 'Anterior' : 'Próxima'}
-        </S.PageButton>
+        <S.Buttons>
+          <S.Pagina>Páginas: </S.Pagina>
+          <S.PageButton
+            onClick={() => setNext(1)}
+            style={{
+              backgroundColor: next === 1 ? '#f729bf' : '#fcd1f1',
+              color: next === 1 ? '#fff' : '#007aff',
+            }}
+          >
+            1
+          </S.PageButton>
+          <S.PageButton
+            onClick={() => setNext(2)}
+            style={{
+              backgroundColor: next === 2 ? '#f729bf' : '#fcd1f1',
+              color: next === 2 ? '#fff' : '#007aff',
+            }}
+          >
+            2
+          </S.PageButton>
+          <S.PageButton
+            onClick={() => setNext(3)}
+            style={{
+              backgroundColor: next === 3 ? '#f729bf' : '#fcd1f1',
+              color: next === 3 ? '#fff' : '#007aff',
+            }}
+          >
+            3
+          </S.PageButton>
+        </S.Buttons>
+
         <MdCatchingPokemon size={45} color={'#fcd1f1'} />
       </S.ButtonContainer>
       <S.Lista>
